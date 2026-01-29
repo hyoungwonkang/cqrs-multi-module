@@ -1,0 +1,23 @@
+dependencies {
+	// Spring Web
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+
+	// module-core-jpa
+	implementation project(':module-core-jpa')	
+
+	// module-core-mapper
+	implementation project(':module-core-mapper')	
+}
+
+
+// Spring Boot 단독 실행 Jar 생성 켜기(ON)
+bootJar {
+	enabled = true
+}
+
+// 일반 라이브러리 Jar 생성 끄기(OFF)
+jar {
+	enabled = false
+}
+
+
