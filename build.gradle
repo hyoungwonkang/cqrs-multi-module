@@ -24,6 +24,12 @@ subprojects {
 		}
 	}
 	
+	configurations {
+		compileOnly {
+		extendsFrom annotationProcessor
+		}
+	}
+	
 	dependencies {
 		implementation 'org.springframework.boot:spring-boot-starter'
 		testImplementation 'org.springframework.boot:spring-boot-starter-test'
@@ -41,8 +47,15 @@ subprojects {
 	tasks.named('test') {
 		useJUnitPlatform()
 	}
+
+	// Spring Boot 단독 실행 Jar 생성 끄기(OFF)
+	bootJar {
+		enabled = false
+	}
+
+	// 일반 라이브러리 Jar 생성 켜기(ON)
+	jar {
+		enabled = true
+	}
 }
-
-
-
 

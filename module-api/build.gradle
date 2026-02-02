@@ -2,6 +2,9 @@ dependencies {
 	// Spring Web
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 
+	// MySQL
+	implementation 'com.mysql:mysql-connector-j'
+	
 	// module-core-jpa
 	implementation project(':module-core-jpa')	
 
